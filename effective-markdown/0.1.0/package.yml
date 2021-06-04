@@ -1,0 +1,19 @@
+name: effective-markdown 
+parent: default
+
+global_vars:
+  - name: "clipboard"
+    type: "clipboard"
+
+matches:
+  - trigger: "[)"
+    replace: "[$|$]({{clipboard}})"
+
+  - trigger: "]("
+    replace: "]({{clipboard}})"
+
+  - trigger: "-["
+    replace: "- [ ] "
+
+  - trigger: "--["
+    replace: "- [ ] $|$\n- [ ] "
