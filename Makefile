@@ -36,3 +36,4 @@ tabulate:
 	| perl -p -e 's/\t/` | `/g' \
 	>> ${TMP}
 	mv -f ${TMP} ${FIN}
+	git add ${FIN}
