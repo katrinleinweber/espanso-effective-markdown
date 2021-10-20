@@ -5,7 +5,7 @@ A few radically effective Markdown snippets I use in [Espanso.org](https://espan
 ## Installation
 
 Not yet possible [directly](https://espanso.org/docs/packages/#from-a-repository),
-but as this repo is mirrored to GitHub, this works:
+but this works:
 
 ```shell
 # espanso uninstall effective-markdown # In case you want to upgrade
