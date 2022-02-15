@@ -17,3 +17,6 @@ matches:
 
   - trigger: "--["
     replace: "- [ ] $|$\n- [ ] "
+
+  - trigger: ">>--"
+    replace: "> $|$\n> -- {{clipboard}}\n\n"

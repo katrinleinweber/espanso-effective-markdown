@@ -42,3 +42,4 @@ Trigger | Espansion
 `](` | `]({{clipboard}})`
 `-[` | `- [ ] `
 `--[` | `- [ ] $\|$\n- [ ] `
+`>>--` | `> $\|$\n> -- {{clipboard}}\n\n`
