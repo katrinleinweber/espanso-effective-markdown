@@ -38,8 +38,18 @@ Appending the up-to-date list of triggers and espansions requires:
 
 Trigger | Espansion
 ------- | ---------
-`[)` | `[$\|$]({{clipboard}})`
-`](` | `]({{clipboard}})`
-`-[` | `- [ ] `
-`--[` | `- [ ] $\|$\n- [ ] `
-`>>--` | `> $\|$\n> -- {{clipboard}}\n\n`
+``` [) ``` | ``` [$\|$]({{clipboard}}) ```
+``` ]( ``` | ``` ]({{clipboard}}) ```
+``` -[ ``` | ``` - [ ]  ```
+``` --[ ``` | ``` - [ ] $\|$\n- [ ]  ```
+``` >>-- ``` | ``` > $\|$\n> -- {{clipboard}}\n\n ```
+``` ``go`` ``` | ` ```go\n$\|$\n``` `
+``` ``j`` ``` | ` ```java\n$\|$\n``` `
+``` ``js`` ``` | ` ```javascript\n$\|$\n``` `
+``` ``kt`` ``` | ` ```kotlin\n$\|$\n``` `
+``` ``pt`` ``` | ` ```plaintext\n$\|$\n``` `
+``` ``rb`` ``` | ` ```ruby\n$\|$\n``` `
+``` ``rs`` ``` | ` ```rust\n$\|$\n``` `
+``` ``sh`` ``` | ` ```shell\n$\|$\n``` `
+``` ``ts`` ``` | ` ```typescript\n$\|$\n``` `
+``` ``y`` ``` | ` ```yaml\n$\|$\n``` `

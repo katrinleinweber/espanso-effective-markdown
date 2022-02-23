@@ -29,11 +29,12 @@ tabulate:
 		${PGK}/${VER}/package.yml \
 	| jq -r '.[] | [.trigger, .replace]' \
 	| jq -r '@tsv' \
-	| perl -p -e 's/\`//g' \
-	| awk '{print "`"$$0}' \
-	| awk '{print $$0"`"}' \
+	| awk '{print "``` "$$0}' \
+	| awk '{print $$0" ```"}' \
 	| perl -p -e 's/\|/\\|/g' \
-	| perl -p -e 's/\t/` | `/g' \
+	| perl -p -e 's/\t/ ``` | ``` /g' \
+	| perl -p -e 's/ ``` ```/ ` ```/g' \
+	| perl -p -e 's/``` ```/``` `/g' \
 	>> ${TMP}
 	mv -f ${TMP} ${FIN}
 	git add ${FIN}
