@@ -20,3 +20,36 @@ matches:
 
   - trigger: ">>--"
     replace: "> $|$\n> -- {{clipboard}}\n\n"
+
+
+# Preformatted blocks with syntax highlighting
+
+  - trigger: "``go``"
+    replace: "```go\n$|$\n```"
+
+  - trigger: "``j``"
+    replace: "```java\n$|$\n```"
+
+  - trigger: "``js``"
+    replace: "```javascript\n$|$\n```"
+
+  - trigger: "``kt``"
+    replace: "```kotlin\n$|$\n```"
+
+  - trigger: "``pt``"
+    replace: "```plaintext\n$|$\n```"
+
+  - trigger: "``rb``"
+    replace: "```ruby\n$|$\n```"
+
+  - trigger: "``rs``"
+    replace: "```rust\n$|$\n```"
+
+  - trigger: "``sh``"
+    replace: "```shell\n$|$\n```"
+
+  - trigger: "``ts``"
+    replace: "```typescript\n$|$\n```"
+
+  - trigger: "``y``"
+    replace: "```yaml\n$|$\n```"
