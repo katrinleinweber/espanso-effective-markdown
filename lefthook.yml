@@ -1,12 +1,15 @@
 pre-commit:
-  skip:
-    - merge
-    - rebase
   parallel: true
   commands:
     append:
       glob: '**/package.yml'
       run : 'make tabulate'
+      skip:
+        - merge
+        - rebase
     inject:
       glob: '**/package.yml'
       run : 'make inject'
+      skip:
+        - merge
+        - rebase
