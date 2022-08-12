@@ -9,7 +9,7 @@ matches:
   - trigger: "[)"
     replace: "[$|$]({{clipboard}})"
 
-  - trigger: "]("
+  - trigger: "]()"
     replace: "]({{clipboard}})"
 
   - trigger: "-["
