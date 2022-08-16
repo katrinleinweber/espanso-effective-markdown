@@ -1,13 +1,10 @@
 PGK=effective-markdown
-VER=$$(/bin/ls ${PGK} \
-	| sort --human-numeric-sort --reverse \
-	| head -1)
 TMP=RM.md
 FIN=README.md
 
 # Test locally, by copying latest yml to local package install
 inject:
-	cd ${PGK}/${VER} \
+	cd ${PGK} \
 		&& cp -f \
 			package.yml \
 			"$$(espanso path packages)/${PGK}/"
@@ -26,7 +23,7 @@ tabulate:
 	echo '\nTrigger | Espansion' >> ${TMP}
 	echo '------- | ---------' >> ${TMP}
 	yq eval '.matches' -o=json \
-		${PGK}/${VER}/package.yml \
+		${PGK}/package.yml \
 	| jq -r '.[] | [.trigger, .replace]' \
 	| jq -r '@tsv' \
 	| awk '{print "``` "$$0}' \
@@ -37,4 +34,5 @@ tabulate:
 	| perl -p -e 's/``` ```/``` `/g' \
 	>> ${TMP}
 	mv -f ${TMP} ${FIN}
-	git add ${FIN}
+	cp ${FIN} ${PGK}/${FIN}
+	git add ${FIN} ${PGK}/${FIN}

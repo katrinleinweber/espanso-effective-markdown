@@ -4,13 +4,11 @@ A few radically effective Markdown snippets I use in [Espanso.org](https://espan
 
 ## Installation
 
-Not yet possible [directly](https://espanso.org/docs/packages/#from-a-repository),
-but this works:
+This is [an "external" package](https://espanso.org/docs/packages/external-packages/).
 
-```shell
-# espanso uninstall effective-markdown # In case you want to upgrade
-espanso install effective-markdown --external  \
-    https://github.com/katrinleinweber/espanso-effective-markdown
+```plaintext
+espanso install gitlab-support --external --git https://gitlab.com/gitlab-com/support/toolbox/espanso \
+  --force  # to overwrite/upgrade already installed package
 ```
 
 ## Contributing
