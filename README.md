@@ -9,7 +9,7 @@ but this works:
 
 ```shell
 # espanso uninstall effective-markdown # In case you want to upgrade
-espanso install effective-markdown --external  \
+espanso install effective-markdown --external --git \
     https://github.com/katrinleinweber/espanso-effective-markdown
 ```
 
